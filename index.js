@@ -1,6 +1,6 @@
 
 
-var js_algorithms_namespace = {
+var js_algorithms = {
 
 	main : function () {
 
@@ -60,4 +60,17 @@ var js_algorithms_namespace = {
 
 };
 
-js_algorithms_namespace.main();
+js_algorithms.main();
+
+
+var js_data_structures = {
+	main : function () {
+		this.promises();
+	},
+
+	promises : function () {
+
+	}
+};
+
+js_data_structures.main();
