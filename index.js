@@ -4,6 +4,8 @@ var js_algorithms_namespace = {
 
 	main : function () {
 
+		this.selectionSort( [7,6,4,3,2,1]);
+
 		this.bubbleSort( [2, 1] );
 		this.bubbleSort( [3,2,1] );
 		this.bubbleSort( [4,3,2,1] );
@@ -26,12 +28,33 @@ var js_algorithms_namespace = {
 				}
 			}
 		}
-		console.log ( array );
+		console.log ( "BubbleSorted: " +  array );
 
 		return array;
 	},
 
-	selectionSort : function () {
+	selectionSort : function ( array ) {
+		for (var i = 0; i < array.length - 1; i++)
+		{
+			var smallestIdx = i;
+
+			for (var j = i + 1; j < array.length; j++)
+			{
+				if (array[j] < array[smallestIdx])
+				{
+					smallestIdx = j;
+				}
+			}
+
+			//swap
+			if (smallestIdx !== i)
+			{
+				var tempVal = array[smallestIdx];
+				array[smallestIdx] = array[i];
+				array[i] = tempVal;
+			}
+		}
+		console.log("SelectionSorted: " + array);
 
 	}
 
